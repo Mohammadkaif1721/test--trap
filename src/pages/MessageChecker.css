@@ -1,0 +1,224 @@
+
+.message-checker-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #fff;
+  padding: 100px 7% 60px;
+}
+
+.message-checker-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.message-checker-header svg {
+  color: #dc143c;
+}
+
+.message-checker-header h1 {
+  font-size: 38px;
+  margin: 15px 0;
+}
+
+.message-checker-header p {
+  color: #aaa;
+  max-width: 650px;
+  margin: auto;
+}
+
+.message-checker-card,
+.message-result-card {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 30px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+}
+
+.message-checker-card label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.message-checker-card textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  background: #080808;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 15px;
+  outline: none;
+}
+
+.message-checker-card textarea:focus {
+  border-color: #dc143c;
+}
+
+.message-input-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-size: 12px;
+  margin: 12px 0 20px;
+}
+
+.message-scan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #dc143c;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.message-scan-btn:hover {
+  background: #ff1744;
+}
+
+.message-scan-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message-error {
+  color: #ff526e;
+  margin-bottom: 15px;
+}
+
+.message-result-card h2 {
+  margin-bottom: 25px;
+}
+
+.message-verdict {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #181818;
+}
+
+.message-verdict h3 {
+  margin: 0 0 8px;
+}
+
+.message-verdict p {
+  margin: 0;
+  color: #aaa;
+}
+
+.message-verdict.fraud {
+  color: #ff4d4d;
+}
+
+.message-verdict.suspicious {
+  color: #ffb020;
+}
+
+.message-verdict.genuine {
+  color: #36d399;
+}
+
+.message-risk-bar {
+  height: 8px;
+  background: #292929;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0 30px;
+}
+
+.message-risk-fill {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.message-risk-fill.fraud {
+  background: #ff4d4d;
+}
+
+.message-risk-fill.suspicious {
+  background: #ffb020;
+}
+
+.message-risk-fill.genuine {
+  background: #36d399;
+}
+
+.message-findings {
+  list-style: none;
+  padding: 0;
+}
+
+.message-findings li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #181818;
+  padding: 13px;
+  border-radius: 7px;
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.message-findings svg {
+  color: #dc143c;
+  flex-shrink: 0;
+}
+
+.message-detected-urls {
+  margin-top: 25px;
+  overflow-wrap: anywhere;
+}
+
+.message-detected-urls p {
+  color: #aaa;
+}
+
+.message-no-findings {
+  color: #36d399;
+}
+
+.message-disclaimer {
+  margin-top: 25px;
+  padding: 15px;
+  border-left: 3px solid #dc143c;
+  background: #181818;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.message-disclaimer strong {
+  color: #dc143c;
+}
+
+@media (max-width: 600px) {
+  .message-checker-page {
+    padding: 90px 5% 40px;
+  }
+
+  .message-checker-card,
+  .message-result-card {
+    padding: 20px;
+  }
+
+  .message-checker-header h1 {
+    font-size: 28px;
+  }
+
+  .message-input-footer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

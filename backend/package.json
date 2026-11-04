@@ -1,0 +1,23 @@
+{
+  "name": "test-trap-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.12",
+    "@babel/traverse": "^7.29.12",
+    "adm-zip": "^0.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.22.3",
+    "multer": "^2.5.0",
+    "tldts": "^7.4.19",
+    "yauzl": "^3.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

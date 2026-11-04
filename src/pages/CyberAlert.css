@@ -1,0 +1,314 @@
+
+.cyber-alert-page {
+  min-height: 100vh;
+  background: #080808;
+  color: #fff;
+  padding: 100px 7% 60px;
+}
+
+.cyber-alert-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cyber-alert-icon {
+  display: inline-flex;
+  padding: 16px;
+  color: #dc143c;
+  background: #171717;
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+
+.cyber-alert-header h1 {
+  font-size: 38px;
+  margin: 18px 0 10px;
+}
+
+.cyber-alert-header p {
+  color: #999;
+}
+
+.cyber-alert-form-card,
+.cyber-alert-history {
+  max-width: 1000px;
+  margin: 0 auto 35px;
+  padding: 28px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 14px;
+}
+
+.cyber-alert-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.cyber-alert-section-title svg {
+  color: #dc143c;
+}
+
+.cyber-alert-section-title h2 {
+  font-size: 21px;
+  margin: 0;
+}
+
+.cyber-alert-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cyber-alert-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cyber-alert-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.cyber-alert-field label {
+  color: #ddd;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cyber-alert-field input,
+.cyber-alert-field select,
+.cyber-alert-field textarea {
+  width: 100%;
+  padding: 13px;
+  color: white;
+  background: #080808;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+}
+
+.cyber-alert-field input:focus,
+.cyber-alert-field select:focus,
+.cyber-alert-field textarea:focus {
+  border-color: #dc143c;
+}
+
+.cyber-alert-field select option {
+  background: #111;
+}
+
+.cyber-alert-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.cyber-alert-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  background: #dc143c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cyber-alert-submit:hover {
+  background: #ff1744;
+}
+
+.cyber-alert-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cyber-alert-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 13px;
+  border-radius: 8px;
+}
+
+.cyber-alert-message.error {
+  color: #ff526e;
+  background: #251016;
+}
+
+.cyber-alert-message.success {
+  color: #36d399;
+  background: #10251b;
+}
+
+.history-heading {
+  justify-content: space-between;
+}
+
+.cyber-alert-refresh {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  color: #ddd;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.cyber-alert-empty {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+}
+
+.cyber-alert-list {
+  display: grid;
+  gap: 18px;
+}
+
+.cyber-alert-item {
+  padding: 20px;
+  background: #080808;
+  border: 1px solid #292929;
+  border-radius: 10px;
+}
+
+.cyber-alert-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.severity-badge,
+.category-badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.severity-low {
+  color: #36d399;
+  background: #10251b;
+}
+
+.severity-medium {
+  color: #ffb020;
+  background: #261e0d;
+}
+
+.severity-high {
+  color: #ff7043;
+  background: #28140d;
+}
+
+.severity-critical {
+  color: #ff526e;
+  background: #291018;
+}
+
+.category-badge {
+  color: #ddd;
+  background: #202020;
+}
+
+.cyber-alert-date {
+  color: #777;
+  font-size: 12px;
+}
+
+.cyber-alert-item h3 {
+  margin: 18px 0 10px;
+  font-size: 19px;
+}
+
+.cyber-alert-description {
+  color: #aaa;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.cyber-alert-evidence {
+  margin-top: 15px;
+  color: #dc143c;
+}
+
+.cyber-alert-evidence summary {
+  cursor: pointer;
+}
+
+.cyber-alert-evidence pre {
+  margin-top: 12px;
+  padding: 15px;
+  background: #151515;
+  color: #bbb;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-radius: 7px;
+}
+
+.cyber-alert-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cyber-alert-actions button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  color: #ddd;
+  background: #191919;
+  border: 1px solid #333;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.cyber-alert-actions button:hover {
+  border-color: #dc143c;
+}
+
+.cyber-alert-actions .delete-alert-btn {
+  color: #ff526e;
+}
+
+@media (max-width: 650px) {
+  .cyber-alert-page {
+    padding: 90px 5% 40px;
+  }
+
+  .cyber-alert-form-card,
+  .cyber-alert-history {
+    padding: 18px;
+  }
+
+  .cyber-alert-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cyber-alert-field.full-width {
+    grid-column: auto;
+  }
+
+  .cyber-alert-header h1 {
+    font-size: 29px;
+  }
+}
