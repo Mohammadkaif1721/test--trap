@@ -1,15 +1,11 @@
+
 import "./Features.css";
-import { useEffect } from "react";
 import {
   Code2,
   Globe,
   MessageSquareText,
   BellRing,
   ArrowRight,
-  ShieldCheck,
-  Zap,
-  Users,
-  Languages,
   AlertTriangle,
   Search,
   FileText,
@@ -27,7 +23,6 @@ const features = [
     tags: ["Static Analysis", "Secret Detection", "Best Practices"],
     icon: Code2,
     type: "code",
-    action: "Try Code Scanner",
   },
   {
     number: "02",
@@ -38,7 +33,6 @@ const features = [
     tags: ["URL Analysis", "Phishing Detection", "Domain Reputation"],
     icon: Globe,
     type: "url",
-    action: "Try URL Scanner",
   },
   {
     number: "03",
@@ -49,7 +43,6 @@ const features = [
     tags: ["English", "Hindi / Hinglish", "Scam Detection"],
     icon: MessageSquareText,
     type: "message",
-    action: "Try Message Checker",
   },
   {
     number: "04",
@@ -60,7 +53,6 @@ const features = [
     tags: ["Threat Reports", "Risk Assessment", "Report Sharing"],
     icon: BellRing,
     type: "alert",
-    action: "Try Cyber Alert",
   },
 ];
 
@@ -135,11 +127,13 @@ function UrlPreview() {
           <i className="risk-bar red-bar" />
           <b className="risk-red">Review</b>
         </div>
+
         <div>
           <span>URL Structure</span>
           <i className="risk-bar green-bar" />
           <b className="risk-green">Checked</b>
         </div>
+
         <div>
           <span>Threat Indicators</span>
           <i className="risk-bar red-bar" />
@@ -210,8 +204,12 @@ function ReportPreview() {
       </div>
 
       <div className="report-actions">
-        <span><Download size={15} /> Download Report</span>
-        <span><Share2 size={15} /> Share</span>
+        <span>
+          <Download size={15} /> Download Report
+        </span>
+        <span>
+          <Share2 size={15} /> Share
+        </span>
       </div>
     </div>
   );
@@ -243,9 +241,6 @@ export default function Features() {
       <div className="features-grid-bg" />
 
       <div className="features-container relative z-10">
-
-       
-
         {/* Feature cards */}
         <div className="features-grid">
           {features.map((feature) => {
@@ -279,10 +274,15 @@ export default function Features() {
                     ))}
                   </div>
 
-                  <a href="#signup" className="feature-link">
-                    <span><ArrowRight size={19} /></span>
-                    {feature.action}
-                    <ArrowRight size={16} />
+                  {/* Single arrow button */}
+                  <a
+                    href="#signup"
+                    className="feature-link"
+                    aria-label={`Explore ${feature.title}`}
+                  >
+                    <span>
+                      <ArrowRight size={19} />
+                    </span>
                   </a>
                 </div>
 
@@ -293,10 +293,6 @@ export default function Features() {
             );
           })}
         </div>
-
-        {/* Bottom information bar */}
-       
-
       </div>
     </section>
   );

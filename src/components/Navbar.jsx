@@ -16,7 +16,11 @@ export default function Navbar() {
       <nav className="nav-container h-[92px] flex items-center justify-between">
 
         {/* LOGO */}
-        <a href="#home" className="flex items-center gap-3 shrink-0">
+        <a
+          href="#home"
+          onClick={() => setOpen(false)}
+          className="flex items-center gap-3 shrink-0"
+        >
           <div className="w-12 h-12 rounded-xl bg-[#DC143C] flex items-center justify-center shadow-lg shadow-[#DC143C]/20">
             <Shield size={27} strokeWidth={2} />
           </div>
@@ -32,16 +36,14 @@ export default function Navbar() {
             <a
               key={name}
               href={href}
-              className={`nav-link ${
-                index === 0 ? "active" : ""
-              }`}
+              className={`nav-link ${index === 0 ? "active" : ""}`}
             >
               {name}
             </a>
           ))}
         </div>
 
-        {/* RIGHT ACTIONS */}
+        {/* DESKTOP ACTIONS */}
         <div className="hidden lg:flex items-center gap-8">
           <a href="/login" className="login-link">
             Login
@@ -53,8 +55,9 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* MOBILE MENU */}
+        {/* MOBILE MENU BUTTON */}
         <button
+          type="button"
           onClick={() => setOpen(!open)}
           className="lg:hidden text-white p-2"
           aria-label="Toggle menu"
@@ -64,6 +67,7 @@ export default function Navbar() {
         </button>
       </nav>
 
+      {/* MOBILE MENU */}
       {open && (
         <div className="lg:hidden bg-[#111111] border-t border-white/10 p-6 flex flex-col gap-6">
           {links.map(([name, href]) => (
@@ -77,8 +81,18 @@ export default function Navbar() {
             </a>
           ))}
 
+          {/* MOBILE LOGIN */}
           <a
-            href="#login"
+            href="/login"
+            onClick={() => setOpen(false)}
+            className="login-link"
+          >
+            Login
+          </a>
+
+          {/* MOBILE GET STARTED */}
+          <a
+            href="/signup"
             onClick={() => setOpen(false)}
             className="get-started-btn justify-center"
           >
