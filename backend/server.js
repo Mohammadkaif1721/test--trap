@@ -57,3 +57,10 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Test Trap backend running on port ${PORT}`);
 });
+
+app.get("/", (req, res) => {
+  res.json({
+    status: "success",
+    message: "Test Trap API is running 🚀",
+  });
+});
