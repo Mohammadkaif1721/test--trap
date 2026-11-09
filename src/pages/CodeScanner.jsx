@@ -27,7 +27,7 @@ import {
 import "./CodeScanner.css";
 import { supabase } from "../lib/supabase";
 
-const API_BASE = "http://localhost:5000/api/scanner";
+const API_BASE = "https://test-trap.onrender.com/api/scanner";
 
 const SEVERITY_ORDER = {
   CRITICAL: 0,

@@ -21,7 +21,7 @@ export default function MessageChecker() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/message-scanner/scan",
+       "https://test-trap.onrender.com/api/message-scanner/scan",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -13,8 +13,8 @@ import {
 
 import { logActivity } from "../utils/activityLogger";
 import "./URLScanner.css";
+const API_URL = "https://test-trap.onrender.com/api/url-scanner/scan";
 
-const API_URL = "http://localhost:5000/api/url-scanner/scan";
 
 export default function URLScanner() {
   const [url, setUrl] = useState("");
